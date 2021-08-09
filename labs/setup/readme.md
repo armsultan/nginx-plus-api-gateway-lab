@@ -34,6 +34,12 @@ $ docker exec -i -t nginx-plus-api-gateway /bin/bash
    [`cat`](http://www.linfo.org/cat.html) command but supports syntax
    highlighting for a large number of programming and markup languages
 
+#### 2. Open the Lab Guide
+
+1. Open the Lab guide in a Web browser on [http://localhost:9000](http://localhost:9000)
+
+![Table Of Contents](media/table-of-contents.png)
+
 #### 3. Open NGINX Plus Dashboard
 
 To see real-time metrics of traffic passing through the NGINX Plus API Gateway

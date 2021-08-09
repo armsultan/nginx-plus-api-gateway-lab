@@ -12,6 +12,9 @@
 * [Lab 5: Enforcing Specific Request Methods](lab5/readme.md)
 * [Lab 6: Controlling Request Sizes](lab6/readme.md)
 
+#### NGINX JavaScript
+* [Lab 7: Validating Request Bodies](lab7/readme.md)
+
 #### JWT Authentication
 * [Lab 8: JWT Authentication](lab8/readme.md)
 * [Lab 9: Nested JWT Claims and Array Data](lab9/readme.md)
@@ -21,16 +24,16 @@
 -----
 ## TODO List
 
-For information about practices that also apply to regular HTTP
-requests, see the documentation for IP address‑based access control lists
-(ACLs), digital certificate authentication, and HTTP Basic authentication. Here,
-we focus on API‑specific authentication methods.
-
 ### API Security with NAP
  TODO
 
 ### API Security with NAP DoS
  TODO
 
-#### NGINX JavaScript
-* TODO: [Lab 7: Validating Request Bodies](lab7/readme.md)
+For now, read the following blog posts:
+
+ * [Defending Applications from Complex and Modern Attacks](https://www.nginx.com/blog/defending-applications-complex-modern-attacks/)
+ * [How NGINX App Protect Denial of Service Adapts to the Evolving Attack Landscape](https://www.nginx.com/blog/nginx-app-protect-denial-of-service-blocks-application-level-dos-attacks/)
+ * [NGINX App Protect Denial of Service Blocks Application-Level DoS Attacks](https://www.nginx.com/blog/nginx-app-protect-denial-of-service-blocks-application-level-dos-attacks/)
+
+

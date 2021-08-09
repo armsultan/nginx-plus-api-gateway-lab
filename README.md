@@ -234,36 +234,11 @@ d661be4a640c   nginx-api-gateway-nim-demo-nginx-instance-manager   "/entrypoint.
 
 ## Demo Instructions:
 
-In one terminal view the Nginx logs in realtime and in another terminal enter
-the Nginx terminal. Open the demo instructions and NGINX Plus Dashboard in two
-seperate tabs in a web browser
+1. Open the Lab guide in a Web browser on
+   [http://localhost:9000](http://localhost:9000) and follow the getting started
+   guide
 
-### View Nginx logs in real time
-```bash
-# By CONTAINER ID
-# docker logs -f [CONTAINER ID]
-
-# By CONTAINER Name
-$ docker logs -f nginx-plus-api-gateway
-```
-
-### Enter terminal of NGINX docker container
-```bash
-# By CONTAINER ID
-# docker logs -f [CONTAINER ID]
-# docker exec -i -t [CONTAINER ID] /bin/bash
-
-# By CONTAINER Name
-docker exec -i -t nginx-plus-api-gateway /bin/bash
-```
-
-### Nginx Live Monitoring Dashboard:
-
-Open `http://localhost:8080`
-
-### Read demo instructions:
-
-Open `http://localhost:9000` and go to **Getting Started**
+![Table Of Contents](/labs/setup/media/table-of-contents.png)
 
 ## Troubleshooting
 

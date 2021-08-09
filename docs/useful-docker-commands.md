@@ -41,8 +41,14 @@ docker network ls
 # List the running containers (add --all to include stopped containers)
 docker container ls
 
-#Delete all running and stopped containers
-docker container rm -f $(docker ps -aq)
+# To delete all containers including its volumes use,
+docker rm -vf $(docker ps -a -q)
+
+# To delete all the images
+docker rmi -f $(docker images -a -q)
+
+# docker system prune
+docker system prune -a # Remove all unused images not just dangling
 
 #Print the last 100 lines of a container’s logs
 docker container logs --tail 100 web
