@@ -1,0 +1,64 @@
+version: '3.3'
+networks:
+    overlay:
+      ipam:
+        config:
+          - subnet: 172.20.0.0/24 # /16 network takes up to 10min
+services:
+    # NGINX webservers with JSON echo page
+    nginx1:
+        networks:
+            - overlay
+        hostname: nginx1
+        build: nginx
+        expose:
+          - "8811"
+          - "8822"
+          - "8833"
+          - "8844"
+    nginx2:
+        networks:
+            - overlay
+        hostname: nginx2
+        build: nginx
+        expose:
+          - "8811"
+          - "8822"
+          - "8833"
+          - "8844" 
+    # NGINX Plus API Gateway
+    nginx-plus-api-gateway:
+        networks:
+            - overlay
+        container_name: nginx-plus-api-gateway
+        hostname: nginx-plus-api-gateway
+        build: ./nginx-plus
+        volumes:
+            - ./nginx-plus/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./nginx-plus/etc/nginx/api:/etc/nginx/api
+            - ./nginx-plus/etc/nginx/api_conf.d:/etc/nginx/api_conf.d
+            - ./nginx-plus/etc/nginx/conf.d:/etc/nginx/conf.d
+            - ./nginx-plus/etc/nginx/js:/etc/nginx/js
+            - ./nginx-plus/etc/nginx/jwt:/etc/nginx/jwt
+            - ./nginx-plus/etc/nginx/jwk:/etc/nginx/jwk
+            - ./labs:/usr/share/nginx/html/labs
+        ports:
+            - 9000:9000     # Workshop Lab Guide
+            - 8080:8080     # NGINX Plus Dashboard and API
+            - 80:80         # HTTP
+            - 443:443         # HTTPS
+        # restart: always #  - if you want persistent through host reboots
+  # NGINX Instance Manager (NIM)       
+    nginx-instance-manager:     
+        networks:
+        - overlay
+        hostname: nginx-instance-manager
+        build: ./nginx-instance-manager
+        volumes:
+            - ./nginx-instance-manager/etc/nginx/conf.d:/etc/nginx/conf.d
+        ports:
+            - 9090:9090
+            - 9080:80
+            - 9443:443
+            - 10443:10443
+        restart: always
