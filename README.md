@@ -198,11 +198,6 @@ $ docker-compose pull
 $ docker-compose build --no-cache
 ```
 
------------------------
-> See other other useful [`docker`](docs/useful-docker-commands.md) and
-> [`docker-compose`](docs/useful-docker-compose-commands.md) commands
------------------------
-
 #### Start the Demo stack:
 
 Run `docker-compose` in the foreground so we can see real-time log output to the
