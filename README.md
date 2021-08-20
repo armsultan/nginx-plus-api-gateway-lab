@@ -1,4 +1,4 @@
-# Deploying NGINX Plus as an API Gateway
+# NGINX Plus API Gateway Demo/Workshop
 
 This demo package is based on the techical blog post **Deploying NGINX Plus as
 an API Gateway** ([Part
